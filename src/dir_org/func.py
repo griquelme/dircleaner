@@ -9,7 +9,7 @@ from typing import Tuple
 
 
 @dataclass
-class DirectoryData:
+class ReportData:
     """
     Container class for data of the moved/deleted files after organizing a directory.
 
@@ -27,7 +27,7 @@ class DirectoryData:
 
 def organize_directory(
     directory: Path, path_to_ext: dict[Path, list[str]], check_duplicates: bool
-) -> DirectoryData:
+) -> ReportData:
     """
     Organizes files into subdirectories based on file extension.
 
@@ -64,7 +64,7 @@ def organize_directory(
                     duplicates.append((file, dst_file))
             else:
                 ignored.append(file)
-    return DirectoryData(move_count, duplicates, ignored)
+    return ReportData(move_count, duplicates, ignored)
 
 
 def parse_mapping(json_path: Path) -> dict[str, list[str]]:
