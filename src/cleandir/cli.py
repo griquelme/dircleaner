@@ -48,7 +48,7 @@ def print_report(directory: Path, data: func.ReportData):
                 + style(f"{dst}", bold=True, fg="blue")
             )
     echo("")
-    echo(style("✨ All Done! ✨"))
+    echo(style("✨ All Done! ✨", bold=True))
 
 
 @click.command()
