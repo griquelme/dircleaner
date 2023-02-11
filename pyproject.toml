@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "cleandir"
+name = "dircleaner"
 version = "0.1.0"
 description = "CLI utility to sort directories based on file extensions"
 authors = [
@@ -21,11 +21,11 @@ dependencies = [
 requires-python = ">=3.9"
 
 [project.urls]
-Homepage = "https://github.com/griquelme/cleandir"
+Homepage = "https://github.com/griquelme/dircleaner"
 
 [project.scripts]
-cleandir = "cleandir:app"
+dircleaner = "dircleaner:app"
 
 [tool.mypy]
 python_version = "3.9"
-files = ["src/cleandir"]
+files = ["src/dircleaner"]

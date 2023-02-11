@@ -1,4 +1,4 @@
-from cleandir import cli
+from dircleaner import cli
 import click
 from click.testing import CliRunner
 import pytest

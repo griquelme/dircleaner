@@ -6,7 +6,7 @@ Functions used to create test data.
 import json
 from pathlib import Path
 from typing import Optional
-from cleandir.func import get_default_file_mapping
+from dircleaner.func import get_default_file_mapping
 import random
 import string
 
