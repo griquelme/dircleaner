@@ -95,8 +95,8 @@ def app(directory, delete_duplicates, json_file, silent, force):
     their, content is the same, the file in DIRECTORY is deleted.
 
     """
-    path_to_ext = load_dir_to_ext_dict(json_file, directory)
     if force:
+        path_to_ext = load_dir_to_ext_dict(json_file, directory)
         data = func.organize_directory(directory, path_to_ext, delete_duplicates)
         if not silent:
             print_report(directory, data)
