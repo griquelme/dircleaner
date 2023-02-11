@@ -1,4 +1,4 @@
-from dir_org import func
+from cleandir import func
 from pathlib import Path
 from shutil import copyfile
 import pytest
