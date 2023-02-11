@@ -11,7 +11,7 @@ from typing import Tuple
 @dataclass
 class ReportData:
     """
-    Container class for data of the moved/deleted files after organizing a directory.
+    Container class for data of moved/deleted files after organizing a directory.
 
     Attributes
         count (dict[str, int]): Number of files moved into each subdirectory.
