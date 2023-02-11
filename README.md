@@ -50,9 +50,3 @@ If duplicates files exists in the created directory, they can be removed by usin
 ```shell
 cleandir -d <dir-name>
 ```
-
-Available help can be seen through the `--help` flag:
-
-```shell
-cleandir --help
-```
