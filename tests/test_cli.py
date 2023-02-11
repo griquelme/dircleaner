@@ -69,9 +69,18 @@ def test_fails_invalid_json_file(tmp_path: Path):
     with runner.isolated_filesystem(tmp_path):
         utils.create_invalid_json_file(json_path)
         directory.mkdir()
-        result = runner.invoke(cli.app, ["--json-file", json_filename, dir_name])
+        result = runner.invoke(cli.app, ["--json-file", json_filename, "-f", dir_name])
     assert result.exit_code != 0
 
 
 def test_fails_directory_contains_a_file_with_name_of_subdirectory(tmp_path: Path):
-    pass
+    dir_name = "directory"
+    directory = Path(dir_name)
+    # run in an empty directory
+    runner = CliRunner()
+    with runner.isolated_filesystem(tmp_path):
+        directory.mkdir()
+        invalid_file = directory / "documents"
+        invalid_file.touch()
+        result = runner.invoke(cli.app, ["-f", dir_name])
+    assert result.exit_code != 0
